@@ -40,8 +40,8 @@
         }
 
         header {
-            /* NUEVA IMAGEN: Fondo enfocado en ajo negro con un contraste oscuro premium */
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1608686207856-001b95cf60ca?q=80&w=1200') no-repeat center center/cover;
+            /* ¡CORREGIDO! Nueva imagen real de ajo negro texturizado */
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=1200') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 90px 20px;
@@ -121,6 +121,15 @@
             color: var(--accent-color);
         }
 
+        .qr-container {
+            margin-top: 25px;
+            background: white;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -197,6 +206,15 @@
     <footer>
         <p>Todo el código y texto de esta página han sido dedicados al dominio público.</p>
         <p>Puedes copiar, modificar y distribuirla libremente. <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank" rel="noopener">Licencia Creative Commons CC0 1.0 Universal</a></p>
+        
+        <!-- CÓDIGO QR AUTOMÁTICO -->
+        <p style="margin-top: 30px; font-weight: bold;">¡Escanea para compartir este sitio web!</p>
+        <div class="qr-container">
+            <script>
+                // Este pequeño script detecta automáticamente tu enlace de GitHub y crea el QR sin que tengas que escribirlo a mano
+                document.write('<img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=' + encodeURIComponent(window.location.href) + '" alt="Código QR del sitio" />');
+            </script>
+        </div>
     </footer>
 
 </body>
